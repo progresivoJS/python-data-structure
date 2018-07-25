@@ -3,10 +3,11 @@ class Node():
         self.next = None
         self.item = None
 
+
 class Stack():
     def __init__(self):
         self._first = None
-    
+
     def push(self, item):
         old_first = self._first
         self._first = Node()
@@ -16,16 +17,17 @@ class Stack():
     def pop(self):
         if self.isEmpty():
             raise "it's empty stack!"
-        
+
         item = self._first.item
         self._first = self._first.next
         return item
-    
+
     def isEmpty(self):
-        return self._first == None
-    
+        return self._first is None
+
     def size(self):
         pass
+
 
 def main():
     s = Stack()
